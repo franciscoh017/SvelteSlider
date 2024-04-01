@@ -1,0 +1,85 @@
+/* Your app custom styles here */
+
+section {
+  background: #f5f5f5;
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:not(.swiper-slide-active) {
+    .exec-slide {
+      .active-exec-slide-header, .active-exec-details {
+        display: none;
+        opacity: 0;
+      }
+
+      .inactive-exec-slide-header, .inactive-exec-details {
+        display: block;
+      }
+
+      img.exec-photo {
+        width: 80%;
+        margin: 10% 0;
+      }
+    }
+  }
+
+  .exec-slide {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.5s ease-in-out;
+    max-width: 15rem;
+  
+    .active-exec-slide-header {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: rgb(27, 114, 148);
+      margin-top: 1rem;
+      opacity: 1;
+    }
+  
+    img.exec-photo {
+      width: 100%;
+      border-radius: 0.5rem;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .active-exec-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      align-items: center;
+      margin: unset;
+      opacity: 1;
+  
+      p, small {
+        margin: 0;
+      }
+  
+      p {
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+  
+      small {
+        text-transform: uppercase;
+        color: rgb(74, 174, 214);
+        font-weight: bold;
+        font-size: x-small;
+        text-align: center;
+      }
+    }
+
+    .inactive-exec-slide-header, .inactive-exec-details {
+      opacity: 0;
+      display: none;
+    }
+  }
+}
